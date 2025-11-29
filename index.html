@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Awet Teklay — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Awet Teklay — Front-End Developer from Mekelle. Responsive websites, UI/UX, and database basics.">
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <div class="brand">Awet Teklay</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="row">
+        <button class="menu-toggle" aria-label="Open menu" id="menuBtn">☰</button>
+        <button class="btn btn-outline" id="themeToggle">Dark</button>
+        <a href="assets/resume.pdf" class="cta" download>Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="banner">
+      <h1>Hello, I'm <strong>Awet Teklay</strong></h1>
+      <p>I build responsive, accessible, and animated websites. I focus on UI/UX, performance, and clean code that scales. Based in Mekelle, Ethiopia.</p>
+      <div class="actions center" role="group" aria-label="Primary actions">
+        <a class="btn btn-primary" href="projects.html">See Projects</a>
+        <a class="btn btn-outline" href="contact.html">Hire Me</a>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="featured-services">
+      <div id="featured-services" class="section-title">Featured Services</div>
+      <div class="grid grid-3">
+        <div class="card fade-up">
+          <div class="service-row">
+            <div class="service-icon" aria-hidden="true">💻</div>
+            <div>
+              <h3>Frontend Engineering</h3>
+              <p>Modern HTML/CSS/JS solutions with emphasis on performance, maintainability and accessibility.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="animation-delay:.05s">
+          <div class="service-row">
+            <div class="service-icon" aria-hidden="true">🎨</div>
+            <div>
+              <h3>UI / UX Design</h3>
+              <p>Designing clean interfaces and prototypes that improve user flows and conversions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-up" style="animation-delay:.08s">
+          <div class="service-row">
+            <div class="service-icon" aria-hidden="true">🗄️</div>
+            <div>
+              <h3>Databases & Back-End Basics</h3>
+              <p>Small MySQL schemas and simple endpoints to support web applications and demos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="skills-heading">
+      <div id="skills-heading" class="section-title">Skills</div>
+      <div class="skills" role="list">
+        <span class="skill-pill" role="listitem">HTML</span>
+        <span class="skill-pill" role="listitem">CSS</span>
+        <span class="skill-pill" role="listitem">JavaScript</span>
+        <span class="skill-pill" role="listitem">React (learning)</span>
+        <span class="skill-pill" role="listitem">MySQL</span>
+        <span class="skill-pill" role="listitem">Responsive Design</span>
+        <span class="skill-pill" role="listitem">Accessibility</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div>© 2025 Awet Teklay • Built with care • Mekelle</div>
+  </footer>
+
+  <script>
+    // Theme toggle + persist
+    const themeToggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if(saved === 'dark'){
+      document.documentElement.setAttribute('data-theme','dark');
+      themeToggle.textContent = 'Light';
+    } else {
+      themeToggle.textContent = 'Dark';
+    }
+    themeToggle.addEventListener('click', ()=>{
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if(isDark){
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme','light');
+        themeToggle.textContent = 'Dark';
+      } else {
+        document.documentElement.setAttribute('data-theme','dark');
+        localStorage.setItem('theme','dark');
+        themeToggle.textContent = 'Light';
+      }
+    });
+
+    // Simple mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn && menuBtn.addEventListener('click', ()=>{
+      const nav = document.querySelector('.nav-links');
+      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    });
+  </script>
+</body>
+</html>

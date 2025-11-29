@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services & Skills — Awet</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Services offered by Awet Teklay — Web development, UI/UX, Database design.">
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <div class="brand">Awet Teklay</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="row">
+        <button class="menu-toggle" aria-label="Open menu" id="menuBtnS">☰</button>
+        <button class="btn btn-outline" id="themeToggleS">Dark</button>
+        <a href="assets/resume.pdf" class="cta" download>Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" aria-labelledby="services-heading">
+      <div id="services-heading" class="section-title">Services</div>
+
+      <div class="services-list">
+        <div class="card">
+          <h3>Responsive Website Development</h3>
+          <p>Crafting pages that look great on any device with semantic markup and accessible patterns.</p>
+        </div>
+
+        <div class="card">
+          <h3>UI/UX & Prototyping</h3>
+          <p>From wireframes to clickable prototypes to final CSS — I help convert ideas into interfaces.</p>
+        </div>
+
+        <div class="card">
+          <h3>Database Design & Demos</h3>
+          <p>Small MySQL schemas and basic backend examples for student systems, CRUD demos, and prototypes.</p>
+        </div>
+      </div>
+
+      <div class="section-title mt-16">Technical Skills</div>
+      <div class="grid grid-3 mt-8">
+        <div class="card">
+          <h3>Front-End</h3>
+          <p class="small">HTML, CSS, JavaScript, Responsive Layouts, Flexbox, Grid</p>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <p class="small">VS Code, Git, Chrome DevTools, Figma (basic)</p>
+        </div>
+        <div class="card">
+          <h3>Databases</h3>
+          <p class="small">MySQL, simple CRUD backends, PHP basics</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 Awet • Services & Skills</footer>
+
+  <script>
+    const themeToggleS = document.getElementById('themeToggleS');
+    if(localStorage.getItem('theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');themeToggleS.textContent='Light'} else themeToggleS.textContent='Dark';
+    themeToggleS.addEventListener('click', ()=>{const isDark=document.documentElement.getAttribute('data-theme')==='dark';if(isDark){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');themeToggleS.textContent='Dark'}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');themeToggleS.textContent='Light'}});
+    const menuBtnS = document.getElementById('menuBtnS');menuBtnS&&menuBtnS.addEventListener('click', ()=>{const nav=document.querySelector('.nav-links');nav.style.display=(nav.style.display==='flex'?'none':'flex')});
+  </script>
+</body>
+</html>

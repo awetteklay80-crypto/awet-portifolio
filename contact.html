@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Awet</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Contact Awet Teklay — hire for front-end and UI work.">
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <div class="brand">Awet Teklay</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="row">
+        <button class="menu-toggle" aria-label="Open menu" id="menuBtnC">☰</button>
+        <button class="btn btn-outline" id="themeToggleC">Dark</button>
+        <a href="assets/resume.pdf" class="cta" download>Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" aria-labelledby="contact-heading">
+      <div id="contact-heading" class="section-title">Contact Me</div>
+
+      <div class="card" style="max-width:750px;margin:0 auto">
+        <form id="contactForm">
+          <div class="form-row">
+            <input class="input" type="text" name="name" placeholder="Your name" required>
+            <input class="input" type="email" name="email" placeholder="Your email" required>
+          </div>
+          <textarea name="message" placeholder="Tell me about your project" required></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="reset" class="btn btn-outline">Reset</button>
+          </div>
+        </form>
+
+        <div class="mt-16 small">
+          <p>Email: <a href="mailto:awetteklay80@gmail.com">awetteklay80@gmail.com</a></p>
+          <p>Phone: <a href="tel:+251996447439">0996447439</a></p>
+          <p>Location: Mekelle, Ethiopia</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 Awet • Contact</footer>
+
+  <script>
+    const themeToggleC = document.getElementById('themeToggleC');
+    if(localStorage.getItem('theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');themeToggleC.textContent='Light'} else themeToggleC.textContent='Dark';
+    themeToggleC.addEventListener('click', ()=>{const isDark=document.documentElement.getAttribute('data-theme')==='dark';if(isDark){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');themeToggleC.textContent='Dark'}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');themeToggleC.textContent='Light'}});
+    const menuBtnC = document.getElementById('menuBtnC');menuBtnC&&menuBtnC.addEventListener('click', ()=>{const nav=document.querySelector('.nav-links');nav.style.display=(nav.style.display==='flex'?'none':'flex')});
+
+    // handle form (demo — replace with real endpoint)
+    const form = document.getElementById('contactForm');
+    form && form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      alert('Thank you! Your message has been received (demo).');
+      form.reset();
+    });
+  </script>
+</body>
+</html>

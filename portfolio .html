@@ -1,0 +1,220 @@
+<!-- ==================== INDEX.HTML ==================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Awet Portfolio - Home</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+  body{background:#f4f4f4;}
+  header{background:#000;color:#fff;padding:20px;text-align:center;position:sticky;top:0;}
+  nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold;transition:0.3s;}
+  nav a:hover{color:#ff9800;}
+
+  /* Fade Animation */
+  .fade-in{opacity:0;animation:fadeIn 1.5s forwards;}
+  @keyframes fadeIn{to{opacity:1;}}
+
+  #hero{text-align:center;padding:100px 20px;background:#111;color:#fff;animation:fadeIn 2s forwards;}
+  #hero h1{font-size:48px;margin-bottom:10px;animation:slideDown 1s ease-out;}
+  @keyframes slideDown{0%{transform:translateY(-40px);opacity:0;}100%{transform:translateY(0);opacity:1;}}
+  #hero p{font-size:20px;opacity:0.8;}
+</style>
+</head>
+<body>
+<header>
+  <h1>Awet Teklay</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services & Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<section id="hero">
+  <h1>Welcome to My Portfolio</h1>
+  <p>Front-End Developer | UI/UX Designer | Creative Builder</p>
+</section>
+</body>
+</html>
+
+
+<!-- ==================== ABOUT.HTML ==================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About - Awet Portfolio</title>
+<style>
+  body{margin:0;font-family:Arial;background:#fff;}
+  header{background:#000;color:#fff;padding:20px;text-align:center;}
+  nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold;}
+
+  section{padding:60px 20px;max-width:900px;margin:auto;}
+  h2{text-align:center;margin-bottom:20px;animation:fadeIn 1s forwards;}
+  p{font-size:18px;line-height:1.7;animation:slideLeft 1.3s forwards;}
+
+  @keyframes slideLeft{from{transform:translateX(-40px);opacity:0;}to{transform:translateX(0);opacity:1;}}
+  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>About Me</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services & Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<section>
+  <h2>Who I Am</h2>
+  <p>
+    I am a passionate front-end developer and UI/UX designer from Ethiopia. I enjoy building
+    modern, responsive websites and solving real-world problems using clean and optimized code.
+  </p>
+</section>
+</body>
+</html>
+
+
+<!-- ==================== SERVICES.HTML ==================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services - Awet Portfolio</title>
+<style>
+  body{margin:0;font-family:Arial;background:#f7f7f7;}
+  header{background:#000;color:#fff;padding:20px;text-align:center;}
+  nav a{color:#fff;margin:0 15px;text-decoration:none;}
+
+  section{padding:50px 20px;max-width:1100px;margin:auto;}
+  h2{text-align:center;margin-bottom:20px;}
+
+  .box{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+  .card{background:#fff;padding:20px;border-radius:10px;box-shadow:0 0 5px #ccc;transition:0.4s;animation:fadeIn 1.2s forwards;}
+  .card:hover{transform:translateY(-10px);box-shadow:0 5px 20px #bbb;}
+
+  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>My Services & Skills</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services & Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<section>
+  <h2>Services</h2>
+  <div class="box">
+    <div class="card"><h3>Web Development</h3><p>Responsive websites using modern HTML, CSS, JS.</p></div>
+    <div class="card"><h3>UI/UX Design</h3><p>Beautiful, user-friendly interface design.</p></div>
+    <div class="card"><h3>Database Setup</h3><p>MySQL database systems for projects.</p></div>
+  </div>
+</section>
+</body>
+</html>
+
+
+<!-- ==================== PROJECTS.HTML ==================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects - Awet Portfolio</title>
+<style>
+  body{margin:0;font-family:Arial;background:#eef0f1;}
+  header{background:#000;color:#fff;padding:20px;text-align:center;}
+  nav a{color:#fff;margin:0 15px;text-decoration:none;}
+
+  section{padding:60px 20px;max-width:1100px;margin:auto;}
+  h2{text-align:center;margin-bottom:20px;}
+
+  .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+  .project{background:#fff;padding:20px;border-radius:10px;box-shadow:0 0 5px #bbb;transition:0.3s;animation:zoom 1.2s forwards;}
+  .project:hover{transform:scale(1.05);}    
+
+  @keyframes zoom{from{transform:scale(0.7);opacity:0;}to{transform:scale(1);opacity:1;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>My Projects</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services & Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<section>
+  <h2>Recent Work</h2>
+  <div class="projects">
+    <div class="project"><h3>Portfolio Website</h3><p>Fully responsive animated portfolio website.</p></div>
+    <div class="project"><h3>Shop UI</h3><p>Modern e-commerce frontend design.</p></div>
+    <div class="project"><h3>Student Database</h3><p>MySQL-based student record system.</p></div>
+  </div>
+</section>
+</body>
+</html>
+
+
+<!-- ==================== CONTACT.HTML ==================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact - Awet Portfolio</title>
+<style>
+  body{margin:0;font-family:Arial;background:#fafafa;}
+  header{background:#000;color:#fff;padding:20px;text-align:center;}
+  nav a{color:#fff;margin:0 15px;text-decoration:none;}
+
+  section{padding:60px 20px;max-width:600px;margin:auto;}
+  h2{text-align:center;margin-bottom:20px;}
+
+  form{display:grid;gap:15px;}
+  input,textarea{padding:12px;border:1px solid #aaa;border-radius:6px;animation:fadeInUp 1s forwards;}
+  button{padding:12px;background:#000;color:#fff;border:none;border-radius:5px;cursor:pointer;transition:0.3s;}
+  button:hover{background:#ff9800;}
+
+  @keyframes fadeInUp{from{transform:translateY(20px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Contact Me</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services & Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<section>
+  <h2>Get In Touch</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </form>
+</section>
+</body>
+</html>

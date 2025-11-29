@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Awet</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Selected projects by Awet Teklay — portfolio website, student DB, shop UI.">
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <div class="brand">Awet Teklay</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="row">
+        <button class="menu-toggle" aria-label="Open menu" id="menuBtnP">☰</button>
+        <button class="btn btn-outline" id="themeToggleP">Dark</button>
+        <a href="assets/resume.pdf" class="cta" download>Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" aria-labelledby="projects-heading">
+      <div id="projects-heading" class="section-title">Selected Projects</div>
+
+      <div class="grid grid-3">
+        <div class="card project-card">
+          <div class="project-img" aria-hidden="true"></div>
+          <h3>Portfolio Website</h3>
+          <p class="small">A fully responsive portfolio built using semantic HTML & CSS with accessible patterns and a minimal JS layer for toggles and theme.</p>
+          <div class="project-meta">
+            <span class="tag">HTML / CSS</span>
+            <span class="small">2025</span>
+          </div>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-img" aria-hidden="true"></div>
+          <h3>Online Shop UI</h3>
+          <p class="small">Front-end mockup for a small e-commerce shop including product listing and simple cart UI (static demo).</p>
+          <div class="project-meta"><span class="tag">UI / Figma</span><span class="small">2024</span></div>
+        </div>
+
+        <div class="card project-card">
+          <div class="project-img" aria-hidden="true"></div>
+          <h3>Student DB System</h3>
+          <p class="small">A MySQL-backed student record system with basic CRUD operations (demo).</p>
+          <div class="project-meta"><span class="tag">MySQL / PHP</span><span class="small">2024</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:22px;text-align:center">
+        <a href="assets/" class="btn btn-outline">Open assets folder</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 Awet • Projects</footer>
+
+  <script>
+    const themeToggleP = document.getElementById('themeToggleP');
+    if(localStorage.getItem('theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');themeToggleP.textContent='Light'} else themeToggleP.textContent='Dark';
+    themeToggleP.addEventListener('click', ()=>{const isDark=document.documentElement.getAttribute('data-theme')==='dark';if(isDark){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');themeToggleP.textContent='Dark'}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');themeToggleP.textContent='Light'}});
+    const menuBtnP = document.getElementById('menuBtnP');menuBtnP&&menuBtnP.addEventListener('click', ()=>{const nav=document.querySelector('.nav-links');nav.style.display=(nav.style.display==='flex'?'none':'flex')});
+  </script>
+</body>
+</html>

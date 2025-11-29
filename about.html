@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MY PORTIFOLIO</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="About Awet Teklay — Front-End developer from Mekelle.">
+</head>
+<body>
+  <header class="header">
+    <div class="nav">
+      <div class="brand">Awet Teklay</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="row">
+        <button class="menu-toggle" aria-label="Open menu" id="menuBtnA">☰</button>
+        <button class="btn btn-outline" id="themeToggleA">Dark</button>
+        <a href="assets/resume.pdf" class="cta" download>Download CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" aria-labelledby="about-heading">
+      <div id="about-heading" class="section-title">About Me</div>
+
+      <div class="card profile">
+        <div class="avatar" aria-hidden="true">
+          <img src="awet.jpg.jpg"height=600px; width="400px;" alt="Awet Teklay — profile photo">
+        </div>
+        <div class="bio">
+          <h3>Hi — I'm <strong>Awet Teklay</strong></h3>
+          <p>I’m a front-end developer from Mekelle. I build responsive websites and improve interfaces with clean, accessible code. I enjoy learning system programming, UI design, and practical web stacks.</p>
+          <p class="meta">Location: Mekelle, Tigray,Ethiopia <br>• Email: <a href="mailto:awetteklay80@gmail.com">awetteklay80@gmail.com</a><br> •Phone: <a href="tel:+251996447439">0996447439</a></p>
+        </div>
+      </div>
+
+      <div class="grid grid-2 mt-16">
+        <div class="card">
+          <h3>Experience</h3>
+          <p><strong>Freelance web developer</strong> — Built landing pages, student projects and portfolio sites for local clients in Mekelle.</p>
+          <p>I practice front-end work, small back-end integrations, and database-driven demos.</p>
+        </div>
+        <div class="card">
+          <h3>Education & Interests</h3>
+          <p>Currently studying <spam>software enginnering</spam> and learning deeper topics like operating systems, data structures, and Android development.</p>
+          <p>I like prototyping UI flows, optimizing performance, and improving accessibility.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">© 2025 Awet • Made with HTML & CSS</footer>
+
+  <script>
+    // theme + menu (per page)
+    const themeToggleA = document.getElementById('themeToggleA');
+    if(localStorage.getItem('theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');themeToggleA.textContent='Light'} else themeToggleA.textContent='Dark';
+    themeToggleA.addEventListener('click', ()=>{const isDark=document.documentElement.getAttribute('data-theme')==='dark';if(isDark){document.documentElement.removeAttribute('data-theme');localStorage.setItem('theme','light');themeToggleA.textContent='Dark'}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme','dark');themeToggleA.textContent='Light'}});
+    const menuBtnA = document.getElementById('menuBtnA');menuBtnA&&menuBtnA.addEventListener('click', ()=>{const nav=document.querySelector('.nav-links');nav.style.display=(nav.style.display==='flex'?'none':'flex')});
+  </script>
+</body>
+</html>
